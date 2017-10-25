@@ -2,9 +2,9 @@
 
 Mapbox API wrappers for Golang
 
-[![Documentation](https://img.shields.io/badge/docs-godoc-blue.svg)](https://godoc.org/github.com/ryankurte/go-mapbox/lib)
-[![GitHub tag](https://img.shields.io/github/tag/ryankurte/go-mapbox.svg)](https://github.com/ryankurte/go-mapbox)
-[![Build Status](https://travis-ci.org/ryankurte/go-mapbox.svg?branch=master)](https://travis-ci.org/ryankurte/go-mapbox)
+[![Documentation](https://img.shields.io/badge/docs-godoc-blue.svg)](https://godoc.org/github.com/ghetzel/go-mapbox/lib)
+[![GitHub tag](https://img.shields.io/github/tag/ghetzel/go-mapbox.svg)](https://github.com/ghetzel/go-mapbox)
+[![Build Status](https://travis-ci.org/ghetzel/go-mapbox.svg?branch=master)](https://travis-ci.org/ghetzel/go-mapbox)
 
 See [here](https://golanglibs.com/top?q=mapbox) for other golang/mapbox projects.
 
@@ -12,7 +12,7 @@ See [here](https://golanglibs.com/top?q=mapbox) for other golang/mapbox projects
 
 Very early WIP, pull requests and issues are most welcome. See [lib/geocode/](lib/geocode) or [lib/directions/](lib/directions) for an example module to mimic.
 
-Because Travis-CI does not expose the build environment to untrusted branches (ie. Pull Requests) tests have to be manually prompted by a repository admin then force merged. Don't panic when your local tests pass but travis fails with "Mapbox API token not found", we will manually run them as soon as possible. See issue [#10](https://github.com/ryankurte/go-mapbox/issues/10) for more information.
+Because Travis-CI does not expose the build environment to untrusted branches (ie. Pull Requests) tests have to be manually prompted by a repository admin then force merged. Don't panic when your local tests pass but travis fails with "Mapbox API token not found", we will manually run them as soon as possible. See issue [#10](https://github.com/ghetzel/go-mapbox/issues/10) for more information.
 
 ### Modules
 
@@ -32,8 +32,8 @@ Because Travis-CI does not expose the build environment to untrusted branches (i
 ```go
 // Import the core module (and any required APIs)
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib"
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/base"
+    "gopkg.in/ghetzel/go-mapbox.v0/lib"
+    "gopkg.in/ghetzel/go-mapbox.v0/lib/base"
 )
 
 // Fetch token from somewhere
@@ -47,7 +47,7 @@ mapBox := mapbox.NewMapbox(token)
 ### Map API
 ``` go
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/maps"
+    "gopkg.in/ghetzel/go-mapbox.v0/lib/maps"
 )
 
 img, err := mapBox.Maps.GetTiles(maps.MapIDSatellite, 1, 0, 0, maps.MapFormatJpg90, true)
@@ -57,7 +57,7 @@ img, err := mapBox.Maps.GetTiles(maps.MapIDSatellite, 1, 0, 0, maps.MapFormatJpg
 
 ```go
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/geocode"
+    "gopkg.in/ghetzel/go-mapbox.v0/lib/geocode"
 )
 
 // Forward Geocoding
@@ -83,7 +83,7 @@ reverse, err := mapBox.Geocode.Reverse(loc, &reverseOpts)
 
 ```go
 import (
-    "gopkg.in/ryankurte/go-mapbox.v0/lib/directions"
+    "gopkg.in/ghetzel/go-mapbox.v0/lib/directions"
 )
 
 var directionOpts directions.RequestOpts

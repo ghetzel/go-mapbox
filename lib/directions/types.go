@@ -3,7 +3,7 @@
  * Wraps the mapbox directions API for server side use
  * See https://www.mapbox.com/api-documentation/#retrieve-directions for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/ghetzel/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -82,7 +82,7 @@ const (
 type Intersection struct {
 	Location []float64
 	Bearings []float64
-	Entry    []string
+	Entry    []bool
 	In       uint
 	Out      uint
 	Lanes    []Lane
@@ -98,7 +98,7 @@ type Lane struct {
 // StepManeuver
 // https://www.mapbox.com/api-documentation/#stepmaneuver-object
 type StepManeuver struct {
-	Locaton       []float64
+	Location      []float64
 	BearingBefore float64
 	BearingAfter  float64
 	Instruction   string

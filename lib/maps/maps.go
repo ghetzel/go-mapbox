@@ -3,7 +3,7 @@
  * Wraps the mapbox geocoding API for server side use
  * See https://www.mapbox.com/api-documentation/#maps for API information
  *
- * https://github.com/ryankurte/go-mapbox
+ * https://github.com/ghetzel/go-mapbox
  * Copyright 2017 Ryan Kurte
  */
 
@@ -20,7 +20,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/ryankurte/go-mapbox/lib/base"
+	"github.com/ghetzel/go-mapbox/lib/base"
 	"sync"
 )
 

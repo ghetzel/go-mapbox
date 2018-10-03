@@ -11,8 +11,8 @@ package directions
 
 import (
 	"fmt"
-	"github.com/google/go-querystring/query"
 	"github.com/ghetzel/go-mapbox/lib/base"
+	"github.com/google/go-querystring/query"
 	"strings"
 )
 
